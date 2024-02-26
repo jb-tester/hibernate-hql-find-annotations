@@ -52,7 +52,7 @@ public class HibernateTest1 {
             System.out.println("================== simple query with no 'from' as em.createQuery() parameter: ");
             TypedQuery<Datesnumbers> q3 = em.createQuery("where firstNum > 20", Datesnumbers.class);
             q3.getResultList().forEach(System.out::println);
-            
+
         } finally {
             session.close();
         }
